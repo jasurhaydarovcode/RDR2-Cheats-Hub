@@ -1,0 +1,37 @@
+body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+@font-face {
+    font-family: RDR2;
+    src: url(../public/assets/fonts/chinese\ rocks\ rg.ttf);
+}
+
+.fontRDR2 {
+    font-family: "RDR2", sans-serif;
+    letter-spacing: 0.1em;
+}
+
+::-webkit-scrollbar {
+    width: 16px;
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: #000; 
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background-color: #db4c3f; 
+    border-radius: 10px; 
+    border: 3px solid #000; 
+  }
+  
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #bf3e30; 
+  }
+  
