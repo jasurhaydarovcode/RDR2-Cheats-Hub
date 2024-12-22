@@ -1,18 +1,18 @@
 const { app, BrowserWindow } = require('electron');
-// const path = require('path');
+const path = require('path');
 
 function createWindow() {
   const win = new BrowserWindow({
     width: 1200,
     height: 900,
-    // icon: path.join(__dirname, 'public/assets/icons/favicon.png'),  
+    icon: path.join(__dirname, 'public/assets/icons/favicon.png'),
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false
     }
   });
 
-  win.loadFile('public/index.html');
+  win.loadFile(path.join(__dirname, '../public/index.html'));
 }
 
 app.whenReady().then(createWindow);

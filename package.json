@@ -1,27 +1,45 @@
 {
   "name": "rdr2-cheats-hub",
   "version": "1.0.0",
-  "description": "Find all your favorite RDR2 cheats! Read Dead Redemption 2",
-  "main": "src/main.js",
-  "scripts": {
-    "start": "electron ."
-  },
+  "author": "jasurhaydarovcode",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/jasurhaydarovcode/RDR2-Cheats-Hub.git"
   },
+  "main": "src/main.js",
+  "devDependencies": {
+    "electron": "^33.2.1",
+    "electron-builder": "^25.1.8"
+  },
+  "bugs": {
+    "url": "https://github.com/jasurhaydarovcode/RDR2-Cheats-Hub/issues"
+  },
+  "build": {
+    "appId": "com.rgwalker.rdr2cheatshub",
+    "productName": "RDR2 Cheats Hub",
+    "win": {
+      "target": "nsis",
+      "icon": "build/icons/icon.ico",
+      "signAndEditExecutable": false
+    },
+    "files": [
+      "public/**/*",
+      "src/**/*",
+      "node_modules/**/*",
+      "package.json"
+    ]
+  },
+  "description": "Find all your favorite RDR2 cheats! Read Dead Redemption 2",
+  "homepage": "https://github.com/jasurhaydarovcode/RDR2-Cheats-Hub#readme",
   "keywords": [
     "rdr2",
     "cheats",
     "codes"
   ],
-  "author": "jasurhaydarovcode",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/jasurhaydarovcode/RDR2-Cheats-Hub/issues"
-  },
-  "homepage": "https://github.com/jasurhaydarovcode/RDR2-Cheats-Hub#readme",
-  "devDependencies": {
-    "electron": "^33.2.1"
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   }
 }
